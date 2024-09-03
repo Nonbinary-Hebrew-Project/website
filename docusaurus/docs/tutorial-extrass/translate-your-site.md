@@ -3,7 +3,6 @@ sidebar_position: 2
 title: Translate your site
 slug: translate-your-site
 ---
-
 # Translate your site
 
 Let's translate `docs/intro.md` to French.
@@ -12,7 +11,7 @@ Let's translate `docs/intro.md` to French.
 
 Modify `docusaurus.config.js` to add support for the `fr` locale:
 
-```js title="docusaurus.config.js"
+```js
 export default {
   i18n: {
     defaultLocale: 'en',
@@ -41,7 +40,7 @@ Start your site on the French locale:
 npm run start -- --locale fr
 ```
 
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
+Your localized site is accessible at <http://localhost:3000/fr/> and the `Getting Started` page is translated.
 
 :::caution
 
@@ -55,7 +54,7 @@ To navigate seamlessly across languages, add a locale dropdown.
 
 Modify the `docusaurus.config.js` file:
 
-```js title="docusaurus.config.js"
+```js
 export default {
   themeConfig: {
     navbar: {
