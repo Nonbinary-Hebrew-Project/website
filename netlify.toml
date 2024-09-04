@@ -1,5 +1,7 @@
 # example netlify.toml
 [build]
+  # Don't know why, by local and remote want the config.yml
+  # in different locations, so this is a hack for that
   command = "cp static/config.yml static/admin && npm run build"
   functions = "netlify/functions"
   publish = "build"

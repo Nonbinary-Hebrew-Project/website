@@ -37,8 +37,26 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({
+            version,
+            versionDocsDirPath,
+            docPath,
+            permalink,
+            locale,
+          }) => {
+            const parts = docPath.replace(".md", "").split("/");
+            const docName = parts.pop();
+            parts.push("entries");
+            parts.push(docName);
+            const partsWithMergedBase = [
+              parts.slice(0, -2).join("-"),
+              ...parts.slice(-2),
+            ];
+            return (
+              "https://nonbinary-hebrew-project.netlify.app/admin/#/collections/" +
+              partsWithMergedBase.join("/")
+            );
+          },
         },
         blog: {
           showReadingTime: true,
@@ -49,7 +67,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://nonbinary-hebrew-project.netlify.app/admin',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
