@@ -1,5 +1,5 @@
 ---
 title: test title
-slug: test-slug
+slug: test-slugg
 ---
 test body
