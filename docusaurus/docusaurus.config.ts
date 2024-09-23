@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Nonbinary Hebrew Project',
-  tagline: "New grammar, old truths",
+  tagline: "New grammar, old traditions",
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
