@@ -1,13 +1,14 @@
 import React from 'react';
 
-export default function HebrewBlock({children, color}) {
+export default function HebrewBlock({children}) {
   return (
     <span
       dir="rtl"
       style={{
-        backgroundColor: color,
+        backgroundColor: "lightgrey",
         borderRadius: '2px',
-        color: '#fff',
+        color: 'black',
+        fontSize: '1.5rem',
         padding: '0.2rem',
       }}>
       {children}

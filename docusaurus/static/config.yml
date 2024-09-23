@@ -23,22 +23,9 @@ collections:
     - { name: slug, label: Slug, widget: string }
 - name: docs-basics
   label: "docs basics"
-  folder: docusaurus/docs/tutorial-basics
+  folder: docusaurus/docs/grammar
   identifier_field: title
-  extension: md
-  format: frontmatter
-  widget: "list"
-  create: true
-  slug: "{{slug}}"
-  fields:
-    - { name: title, label: Title, widget: string }
-    - { name: body, label: Body, widget: markdown }
-    - { name: slug, label: Slug, widget: string }
-- name: docs-extras
-  label: "docs extras"
-  folder: docusaurus/docs/tutorial-extras
-  identifier_field: title
-  extension: md
+  extension: mdx
   format: frontmatter
   widget: "list"
   create: true
