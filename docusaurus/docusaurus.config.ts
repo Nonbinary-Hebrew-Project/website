@@ -44,8 +44,9 @@ const config: Config = {
             permalink,
             locale,
           }) => {
-            const parts = docPath.replace(".md", "").split("/");
+            const parts = docPath.replace(".mdx", "").split("/");
             const docName = parts.pop();
+            if (parts.length ===0) parts.push("tutorial")
             parts.push("entries");
             parts.push(docName);
             const partsWithMergedBase = [
