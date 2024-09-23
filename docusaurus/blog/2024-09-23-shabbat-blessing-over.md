@@ -1,5 +1,5 @@
 ---
-title: "Shabbat Blessing over "
+title: Shabbat Blessing
 slug: shabbat-post
 tags:
   - Shabbat
