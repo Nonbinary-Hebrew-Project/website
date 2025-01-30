@@ -93,7 +93,7 @@ const config: Config = {
       title: 'Nonbinary Hebrew Project',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/trans-aleph.png',
       },
       items: [
         {
@@ -103,6 +103,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog/tags', label: 'Blog', position: 'left'},
+        {to: '/about', label: 'About Us', position: 'left'},
         {
           href: 'https://github.com/Nonbinary-Hebrew-Project/website',
           label: 'GitHub',
