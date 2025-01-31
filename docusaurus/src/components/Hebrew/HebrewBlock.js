@@ -21,15 +21,44 @@ export default function HebrewBlock({ children }) {
           borderRadius: "2px",
           color: "black",
           fontSize: "1.5rem",
+          padding: "0.3rem",
+        }}
+      >
+        {children}
+      </span>
+      <button
+        style={{
+          backgroundColor: "lightblue",
+          borderRadius: "20px",
+          borderStyle: "solid",
+          borderColor: "black",
+          borderWidth: "1px",
+          color: "black",
           padding: "0.2rem",
+          marginLeft: "0.5rem",
           cursor: "pointer",
         }}
         onClick={handle}
       >
-        {children}
-      </span>
-      {showTrans && <div>{transliterate(children)}</div>}
-      {!showTrans && <div style={srOnly}>{transliterate(children)}</div>}
+        transliterate
+      </button>
+      {showTrans && (
+        <>
+          <br />
+          <span
+            style={{
+              backgroundColor: "lightblue",
+              borderRadius: "2px",
+              color: "black",
+              fontSize: "1.5rem",
+              padding: "0.2rem",
+            }}
+          >
+            {transliterate(children)}
+          </span>
+        </>
+      )}
+      {!showTrans && <span style={srOnly}>{transliterate(children)}</span>}
     </>
   );
 }
