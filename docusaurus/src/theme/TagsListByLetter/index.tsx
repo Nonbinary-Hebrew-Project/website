@@ -12,7 +12,10 @@ import styles from "./styles.module.css";
 function TagLetterEntryItem({ letterEntry }: { letterEntry: TagLetterEntry }) {
   return (
     <article>
-      <Heading as="h2" id={letterEntry.letter}>
+      <Heading
+        as="h2"
+        id={letterEntry.letter.length ? letterEntry.letter : "Uncategorized"}
+      >
         {letterEntry.letter.length ? letterEntry.letter : "Uncategorized"}
       </Heading>
       <ul className="padding--none">
