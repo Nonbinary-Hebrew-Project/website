@@ -91,6 +91,7 @@ collections:
             name: translations
             widget: list
             add_to_top: true
+            label_singular: "translation"
             summary: "{{lemma}} {{def}}"
             fields:
               - { label: Definition, name: def, widget: string }
