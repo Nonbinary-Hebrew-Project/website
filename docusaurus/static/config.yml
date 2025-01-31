@@ -10,7 +10,7 @@ public_folder: "/img/"
 collections:
   - name: about
     label: "about us"
-    folder: docusaurus/src/pages/about/index.mdx
+    folder: docusaurus/src/pages/about
     identifier_field: title
     extension: mdx
     format: frontmatter
