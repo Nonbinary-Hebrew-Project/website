@@ -4,19 +4,45 @@ import strongsHebrewDictionary from "./strongs-hebrew-dictionary";
 import nonbinaryHebrewDictionary from "./nonbinary-hebrew-dictionary";
 const dictionary = Object.values(strongsHebrewDictionary);
 
-function translate(hebrewWord) {
-  const cleanWord = hebrewWord.trim().replaceAll(/[.,]/g, "");
-  const nonbinaryTranslation = nonbinaryHebrewDictionary.find(
-    (dictWord) => cleanWord == dictWord.lemma
+function Translation({ children }) {
+  return (
+    <span
+      style={{
+        backgroundColor: "lightgreen",
+        borderRadius: "2px",
+        borderStyle: "solid",
+        borderWidth: "1px",
+        color: "black",
+        fontSize: "1.5rem",
+        padding: "0.2rem",
+      }}
+    >
+      {children}
+    </span>
   );
-  if (nonbinaryTranslation) return nonbinaryTranslation.def;
+}
+
+function Translations({ children }) {
+  const cleanWord = children.trim().replaceAll(/[.,]/g, "");
+  const collator = new Intl.Collator("he", { usage: "search" });
+  const results = [];
+  const nonbinaryTranslation = nonbinaryHebrewDictionary.find(
+    (dictWord) => collator.compare(cleanWord, dictWord.lemma) === 0
+  );
+  if (nonbinaryTranslation) results.push(nonbinaryTranslation.def);
 
   const strongsTranslation = dictionary.find(
-    (dictWord) => cleanWord == dictWord.lemma
+    (dictWord) => collator.compare(cleanWord, dictWord.lemma) === 0
   );
   if (strongsTranslation)
-    return `${strongsTranslation.strongs_def}, ${strongsTranslation.kjv_def}`;
-  return "?";
+    results.push(strongsTranslation.strongs_def, strongsTranslation.kjv_def);
+  return (
+    <>
+      {(nonbinaryTranslation || strongsTranslation) && (
+        <Translation>{results.join("; ")}</Translation>
+      )}
+    </>
+  );
 }
 
 export default function InsideTranslation({ children }) {
@@ -54,19 +80,8 @@ export default function InsideTranslation({ children }) {
             >
               {transliterate(word)}
             </span>
-            <span
-              style={{
-                backgroundColor: "lightgreen",
-                borderRadius: "2px",
-                borderStyle: "solid",
-                borderWidth: "1px",
-                color: "black",
-                fontSize: "1.5rem",
-                padding: "0.2rem",
-              }}
-            >
-              {translate(word)}
-            </span>
+
+            <Translations>{word}</Translations>
             <br />
           </span>
         ))}
