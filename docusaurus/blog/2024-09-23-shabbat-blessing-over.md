@@ -2,7 +2,7 @@
 title: Shabbat Blessing
 slug: shabbat-post
 tags:
-  - Shabbat
+  - Holidays:Shabbat
   - Prayers
 ---
 
