@@ -52,7 +52,7 @@ collections:
           value_type: int,
         }
   - name: blog
-    label: "blog"
+    label: "Applied Uses"
     folder: docusaurus/blog
     identifier_field: title
     extension: md

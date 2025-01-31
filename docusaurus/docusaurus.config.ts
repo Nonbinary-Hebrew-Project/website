@@ -60,6 +60,10 @@ const config: Config = {
           },
         },
         blog: {
+          routeBasePath: 'uses',
+          blogSidebarTitle: 'All applied uses',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 'ALL',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -102,7 +106,7 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog/tags', label: 'Blog', position: 'left'},
+        {to: '/uses/tags', label: 'Applied Uses', position: 'left'},
         {to: '/about', label: 'About Us', position: 'left'},
         {
           href: 'https://github.com/Nonbinary-Hebrew-Project/website',
