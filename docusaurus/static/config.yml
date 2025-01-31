@@ -10,7 +10,7 @@ public_folder: "/img/"
 collections:
   - name: about
     label: "about us"
-    folder: docusaurus/src/pages/about
+    folder: docusaurus/src/pages/about/index.mdx
     identifier_field: title
     extension: mdx
     format: frontmatter
@@ -91,5 +91,5 @@ collections:
             name: translations
             widget: list
             fields:
-              - { label: Lemma, name: lemma, widget: string }
               - { label: Def, name: def, widget: string }
+              - { label: Lemma, name: lemma, widget: string }
