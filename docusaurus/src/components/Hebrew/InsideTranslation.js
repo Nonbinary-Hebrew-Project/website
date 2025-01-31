@@ -4,11 +4,11 @@ import strongsHebrewDictionary from "./strongs-hebrew-dictionary";
 import nonbinaryHebrewDictionary from "./nonbinary-hebrew-dictionary";
 const dictionary = Object.values(strongsHebrewDictionary);
 
-function Translation({ children }) {
+function ColorBlock({ children, color = "lightgreen" }) {
   return (
     <span
       style={{
-        backgroundColor: "lightgreen",
+        backgroundColor: color,
         borderRadius: "2px",
         borderStyle: "solid",
         borderWidth: "1px",
@@ -22,7 +22,7 @@ function Translation({ children }) {
   );
 }
 
-function Translations({ children }) {
+function WordTranslation({ children }) {
   const cleanWord = children.trim().replaceAll(/[.,]/g, "");
   const collator = new Intl.Collator("he", { usage: "search" });
   const results = [];
@@ -38,50 +38,56 @@ function Translations({ children }) {
     results.push(strongsTranslation.strongs_def, strongsTranslation.kjv_def);
   return (
     <>
-      {(nonbinaryTranslation || strongsTranslation) && (
-        <Translation>{results.join("; ")}</Translation>
+      {nonbinaryTranslation || strongsTranslation ? (
+        <ColorBlock>{results.join("; ")}</ColorBlock>
+      ) : (
+        <ColorBlock color="lightcoral">?</ColorBlock>
       )}
     </>
   );
 }
 
-export default function InsideTranslation({ children }) {
+export default function InsideTranslation({ children, isOnlyWord }) {
   return (
     <span>
       {children
         .trim()
         .split(" ")
-        .map((word, index) => (
+        .map((word, index, array) => (
           <span key={index}>
-            <span
-              dir="rtl"
-              style={{
-                backgroundColor: "lightgrey",
-                borderRadius: "2px",
-                borderStyle: "solid",
-                borderWidth: "1px",
-                color: "black",
-                fontSize: "1.5rem",
-                padding: "0.2rem",
-              }}
-            >
-              {word}
-            </span>
-            <span
-              style={{
-                backgroundColor: "lightblue",
-                borderRadius: "2px",
-                borderStyle: "solid",
-                borderWidth: "1px",
-                color: "black",
-                fontSize: "1.5rem",
-                padding: "0.2rem",
-              }}
-            >
-              {transliterate(word)}
-            </span>
+            {array.length > 1 && (
+              <>
+                <span
+                  dir="rtl"
+                  style={{
+                    backgroundColor: "lightgrey",
+                    borderRadius: "2px",
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                    color: "black",
+                    fontSize: "1.5rem",
+                    padding: "0.2rem",
+                  }}
+                >
+                  {word}
+                </span>
+                <span
+                  style={{
+                    backgroundColor: "lightblue",
+                    borderRadius: "2px",
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                    color: "black",
+                    fontSize: "1.5rem",
+                    padding: "0.2rem",
+                  }}
+                >
+                  {transliterate(word)}
+                </span>
+              </>
+            )}
 
-            <Translations>{word}</Translations>
+            <WordTranslation>{word}</WordTranslation>
             <br />
           </span>
         ))}
