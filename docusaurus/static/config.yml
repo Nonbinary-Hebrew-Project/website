@@ -90,6 +90,7 @@ collections:
           - label: Translations
             name: translations
             widget: list
+            summary: "{{lemma}} {{def}}"
             fields:
               - { label: Definition, name: def, widget: string }
               - { label: Lemma, name: lemma, widget: string }
