@@ -1,9 +1,18 @@
 import React, { useCallback, useState } from "react";
 import { transliterate } from "hebrew-transliteration";
+import InsideTranslation from "./InsideTranslation";
 
 export default function HebrewBlock({ children }) {
-  const [showTrans, setShowTrans] = useState(false);
-  const handle = useCallback(() => setShowTrans(!showTrans), [showTrans]);
+  const [showTransliteration, setShowTransliteration] = useState(false);
+  const [showTranslated, setShowTranslated] = useState(false);
+  const handleTransliterate = useCallback(
+    () => setShowTransliteration(!showTransliteration),
+    [showTransliteration]
+  );
+  const handleTranslate = useCallback(
+    () => setShowTranslated(!showTranslated),
+    [showTranslated]
+  );
   const srOnly = {
     position: "absolute",
     left: "-10000px",
@@ -38,11 +47,27 @@ export default function HebrewBlock({ children }) {
           marginLeft: "0.5rem",
           cursor: "pointer",
         }}
-        onClick={handle}
+        onClick={handleTransliterate}
       >
         transliterate
       </button>
-      {showTrans && (
+      <button
+        style={{
+          backgroundColor: "lightgreen",
+          borderRadius: "20px",
+          borderStyle: "solid",
+          borderColor: "black",
+          borderWidth: "1px",
+          color: "black",
+          padding: "0.2rem",
+          marginLeft: "0.5rem",
+          cursor: "pointer",
+        }}
+        onClick={handleTranslate}
+      >
+        translate
+      </button>
+      {showTransliteration && (
         <>
           <br />
           <span
@@ -58,7 +83,12 @@ export default function HebrewBlock({ children }) {
           </span>
         </>
       )}
-      {!showTrans && <span style={srOnly}>{transliterate(children)}</span>}
+      {showTranslated && (
+        <>
+          <br />
+          <InsideTranslation>{children}</InsideTranslation>
+        </>
+      )}
     </>
   );
 }
