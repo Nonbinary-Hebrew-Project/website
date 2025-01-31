@@ -91,5 +91,5 @@ collections:
             name: translations
             widget: list
             fields:
-              - { label: Def, name: def, widget: string }
+              - { label: Definition, name: def, widget: string }
               - { label: Lemma, name: lemma, widget: string }
