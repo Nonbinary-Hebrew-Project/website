@@ -1,9 +1,8 @@
 ---
-title: Priestly Blessing/Friday Night Children's Blessing
-slug: priestly-blessing
+title: Friday Night Children's Blessing
+slug: friday-night-childrens-blessing
 tags:
   - Holidays:Shabbat
-  - Amidah
 ---
 
 Friday night blessing for children:
