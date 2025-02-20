@@ -71,7 +71,7 @@ collections:
           widget: "file",
           required: false,
           media_library: { config: { multiple: false } },
-          hint: "Only add PDF. Use <PdfViewer frontMatter={frontMatter} /> to embed the PDF in the body.",
+          hint: "Only add PDF-type files. Use <PdfViewer frontMatter={frontMatter} /> to embed the PDF in the body.",
         }
       - { name: slug, label: Slug, widget: string }
       - label: "Tags"
