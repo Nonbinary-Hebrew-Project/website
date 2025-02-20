@@ -9,5 +9,6 @@ tags:
   - Guides
   - Lifecycle:Hevra_Kadisha
 ---
-https://www.keshetonline.org/text-only-toward-a-gender-inclusive-hevra-kadisha/
+[](/img/toward-a-gender-inclusive-hevra-kadisha-final-.pdf)[Toward A Gender-Inclusive Hevra Kadisha - Keshet Webpage](https://www.keshetonline.org/text-only-toward-a-gender-inclusive-hevra-kadisha/)
+
 [Toward A Gender-Inclusive Hevra Kadisha PDF](/img/toward-a-gender-inclusive-hevra-kadisha-final-.pdf)
