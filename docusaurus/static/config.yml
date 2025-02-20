@@ -66,11 +66,12 @@ collections:
           widget: markdown,
         }
       - {
-          label: "Files",
-          name: "applied_use_file",
+          label: "PDF File",
+          name: "pdf_file",
           widget: "file",
           required: false,
-          media_library: { config: { multiple: true } },
+          media_library: { config: { multiple: false } },
+          hint: "Only add PDF. Use <PdfViewer frontMatter={frontMatter} /> to embed the PDF in the body.",
         }
       - { name: slug, label: Slug, widget: string }
       - label: "Tags"
