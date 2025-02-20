@@ -71,11 +71,11 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: ({ blogDirPath, blogPath, permalink, locale }) =>
-            `https://nonbinary-hebrew-project.netlify.app/admin/#/collections/${blogDirPath}/entries/${blogPath.replace(
-              ".md",
-              ""
-            )}`,
+          // editUrl: ({ blogDirPath, blogPath, permalink, locale }) =>
+          //   `https://nonbinary-hebrew-project.netlify.app/admin/#/collections/${blogDirPath}/entries/${blogPath.replace(
+          //     ".md",
+          //     ""
+          //   )}`,
           // Useful options to enforce blogging best practices
           onInlineTags: "ignore",
           onInlineAuthors: "ignore",
