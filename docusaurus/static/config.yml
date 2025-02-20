@@ -54,6 +54,7 @@ collections:
     folder: docusaurus/blog
     identifier_field: title
     extension: mdx
+    format: frontmatter
     widget: "list"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
