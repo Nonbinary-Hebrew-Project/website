@@ -10,4 +10,4 @@ tags:
   - Lifecycle:Hevra_Kadisha
 ---
 https://www.keshetonline.org/text-only-toward-a-gender-inclusive-hevra-kadisha/
-[MyPDF](/img/conversion-certificate-nonbinary-convert-they-mibet-nhp-.pdf)
+[Toward A Gender-Inclusive Hevra Kadisha PDF](/img/toward-a-gender-inclusive-hevra-kadisha-final-.pdf)
