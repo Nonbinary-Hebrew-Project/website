@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "docusaurus"
     steps:
       - uses: actions/checkout@v4
       - run: cd docusaurus
@@ -20,4 +23,5 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
       - run: npm run build
