@@ -21,6 +21,7 @@ export default function HebrewBlock({ children }) {
     height: "1px",
     overflow: "hidden",
   };
+
   return (
     <>
       <span
