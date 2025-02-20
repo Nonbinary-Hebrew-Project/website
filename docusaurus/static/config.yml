@@ -66,10 +66,9 @@ collections:
           widget: markdown,
         }
       - {
-          label: "Manual PDF",
-          name: "manual_pdf",
+          label: "Files",
+          name: "applied_use_file",
           widget: "file",
-          default: "/uploads/general-manual.pdf",
           media_library: { config: { multiple: true } },
         }
       - { name: slug, label: Slug, widget: string }
