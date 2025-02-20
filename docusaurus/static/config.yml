@@ -18,7 +18,12 @@ collections:
     create: false
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: body,
+          hint: "For hebrew blocks, use <HB> צ </HB>. For multi-line hebrew, do not put hebrew on the same line as <HB> or </HB>.",
+          label: Body,
+          widget: markdown,
+        }
   - name: tutorial
     label: "tutorial"
     folder: docusaurus/docs
@@ -30,7 +35,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: body,
+          hint: "For hebrew blocks, use <HB> צ </HB>. For multi-line hebrew, do not put hebrew on the same line as <HB> or </HB>.",
+          label: Body,
+          widget: markdown,
+        }
       - { name: slug, label: Slug, widget: string }
       - {
           name: sidebar_position,
@@ -49,7 +59,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: body,
+          hint: "For hebrew blocks, use <HB> צ </HB>. For multi-line hebrew, do not put hebrew on the same line as <HB> or </HB>.",
+          label: Body,
+          widget: markdown,
+        }
       - { name: slug, label: Slug, widget: string }
       - {
           name: sidebar_position,
@@ -67,7 +82,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: body,
+          hint: "For hebrew blocks, use <HB> צ </HB>. For multi-line hebrew, do not put hebrew on the same line as <HB> or </HB>.",
+          label: Body,
+          widget: markdown,
+        }
       - { name: slug, label: Slug, widget: string }
       - label: "Tags"
         name: "tags"
