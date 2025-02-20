@@ -1,8 +1,10 @@
 ---
-title: A Haggadah of Our Own - Thursday Bram
-slug: haggadah-of-our-own
+title: A Non-Binary Approach to Brit Milah and Baby Naming by Noam Lerman
+slug: nonbinary-brit-milah-baby-naming
 tags:
-  - Passover
-  - Haggadah
+  - Brit_Milah
+  - Baby_Naming
 ---
-[A Haggadah of Our Own by Thursday Bram](https://www.dropbox.com/scl/fo/unoa3fw9q1v9zprgg5y82/ABqO94WEh6S2rcimWCngDnI?rlkey=kv4yxs0f7apc8v0ct2h479fpl&e=1)
+**[A Non-Binary Approach to Brit Milah and Baby Naming](https://docs.google.com/document/d/1JrTcG-fZCA_EgYtla3qmSICxMBSRcIl3xgemtxJu57c/edit?usp=sharing)**
+
+Rabbi Noam Lerman
