@@ -2,7 +2,7 @@
 title: Priestly Blessing/Friday Night Children's Blessing
 slug: priestly-blessing
 tags:
-  - Shabbat
+  - Holidays:Shabbat
   - Amidah
 ---
 
