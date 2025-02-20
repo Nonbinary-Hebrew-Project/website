@@ -2,7 +2,7 @@
 title: Friday Night Shabbat Blessings
 slug: friday-night-blessings
 tags:
-  - Shabbat
+  - Holidays:Shabbat
   - Blessings
   - Handwashing
   - HaMotzi
