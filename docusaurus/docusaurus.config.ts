@@ -121,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: "Grammar",
-              to: "/docs",
+              to: "/docs/nouns",
             },
           ],
         },

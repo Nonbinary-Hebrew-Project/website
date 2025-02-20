@@ -69,6 +69,7 @@ collections:
           label: "Files",
           name: "applied_use_file",
           widget: "file",
+          required: false,
           media_library: { config: { multiple: true } },
         }
       - { name: slug, label: Slug, widget: string }
