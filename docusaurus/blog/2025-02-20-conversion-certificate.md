@@ -1,5 +1,7 @@
 ---
 title: Conversion Certificate
+manual_pdf:
+  - /img/conversion-certificate-nonbinary-convert-they-mibet-nhp-.pdf
 slug: conversion-certificate
 tags:
   - Lifecycle:Conversion
