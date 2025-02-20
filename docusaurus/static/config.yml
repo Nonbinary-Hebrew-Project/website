@@ -24,33 +24,10 @@ collections:
           label: Body,
           widget: markdown,
         }
-  - name: tutorial
-    label: "tutorial"
-    folder: docusaurus/docs
-    identifier_field: title
-    extension: mdx
-    format: frontmatter
-    widget: "list"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: title, label: Title, widget: string }
-      - {
-          name: body,
-          hint: "For hebrew blocks, use <HB> צ </HB>. For multi-line hebrew, do not put hebrew on the same line as <HB> or </HB>.",
-          label: Body,
-          widget: markdown,
-        }
-      - { name: slug, label: Slug, widget: string }
-      - {
-          name: sidebar_position,
-          label: "Sidebar Position",
-          widget: number,
-          value_type: int,
-        }
+
   - name: grammar
-    label: "Tutorial - Grammar"
-    folder: docusaurus/docs/grammar
+    label: "Grammar"
+    folder: docusaurus/docs
     identifier_field: title
     extension: mdx
     format: frontmatter
