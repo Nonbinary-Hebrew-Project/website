@@ -106,6 +106,10 @@ const config: Config = {
         },
         { to: "/uses/tags", label: "Applied Uses", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
+        {
+          type: "custom-translateButtons",
+          position: "right",
+        },
       ],
     },
     footer: {

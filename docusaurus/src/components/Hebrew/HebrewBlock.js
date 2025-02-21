@@ -1,18 +1,21 @@
 import React, { useCallback, useState } from "react";
 import { transliterate } from "hebrew-transliteration";
 import InsideTranslation from "./InsideTranslation";
+import { useCookies } from "react-cookie";
 
 export default function HebrewBlock({ children }) {
   const [showTransliteration, setShowTransliteration] = useState(false);
-  const [showTranslated, setShowTranslated] = useState(false);
-  const handleTransliterate = useCallback(
-    () => setShowTransliteration(!showTransliteration),
-    [showTransliteration]
-  );
-  const handleTranslate = useCallback(
-    () => setShowTranslated(!showTranslated),
-    [showTranslated]
-  );
+  const [cookies] = useCookies(["nbhp_transliterate", "nbhp_translate"]);
+  // const [showTranslated, setShowTranslated] = useState(false);
+  // const handleTransliterate = useCallback(
+  //   () => setShowTransliteration(!showTransliteration),
+  //   [showTransliteration]
+  // );
+  // const handleTranslate = useCallback(
+  //   () => setShowTranslated(!showTranslated),
+  //   [showTranslated]
+  // );
+
   const srOnly = {
     position: "absolute",
     left: "-10000px",
@@ -36,7 +39,7 @@ export default function HebrewBlock({ children }) {
       >
         {children}
       </span>
-      <button
+      {/* <button
         style={{
           backgroundColor: "lightblue",
           borderRadius: "20px",
@@ -67,8 +70,8 @@ export default function HebrewBlock({ children }) {
         onClick={handleTranslate}
       >
         translate
-      </button>
-      {showTransliteration && (
+      </button> */}
+      {cookies.nbhp_transliterate && (
         <>
           <br />
           <span
@@ -84,7 +87,7 @@ export default function HebrewBlock({ children }) {
           </span>
         </>
       )}
-      {showTranslated && (
+      {cookies.nbhp_translate && (
         <>
           <br />
           <InsideTranslation>{children}</InsideTranslation>
