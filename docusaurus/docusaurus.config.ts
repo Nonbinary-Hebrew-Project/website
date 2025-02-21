@@ -106,39 +106,21 @@ const config: Config = {
         },
         { to: "/uses/tags", label: "Applied Uses", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
-        {
-          href: "https://github.com/Nonbinary-Hebrew-Project/website",
-          label: "GitHub",
-          position: "right",
-        },
       ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Contributing",
           items: [
             {
-              label: "Grammar",
-              to: "/docs/nouns",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Github",
+              href: "https://github.com/Nonbinary-Hebrew-Project/website",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Content Manager",
+              href: "/admin",
             },
           ],
         },
