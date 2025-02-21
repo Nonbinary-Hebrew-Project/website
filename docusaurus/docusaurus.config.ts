@@ -120,7 +120,7 @@ const config: Config = {
             },
             {
               label: "Content Manager",
-              href: "/admin",
+              href: "https://nonbinary-hebrew-project.netlify.app/admin/",
             },
           ],
         },
