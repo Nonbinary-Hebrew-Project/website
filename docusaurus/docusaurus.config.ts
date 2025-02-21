@@ -37,27 +37,27 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: ({
-            version,
-            versionDocsDirPath,
-            docPath,
-            permalink,
-            locale,
-          }) => {
-            const parts = docPath.replace(".mdx", "").split("/");
-            const docName = parts.pop();
-            if (parts.length === 0) parts.push("grammar");
-            parts.push("entries");
-            parts.push(docName);
-            const partsWithMergedBase = [
-              parts.slice(0, -2).join("-"),
-              ...parts.slice(-2),
-            ];
-            return (
-              "https://nonbinary-hebrew-project.netlify.app/admin/#/collections/" +
-              partsWithMergedBase.join("/")
-            );
-          },
+          // editUrl: ({
+          //   version,
+          //   versionDocsDirPath,
+          //   docPath,
+          //   permalink,
+          //   locale,
+          // }) => {
+          //   const parts = docPath.replace(".mdx", "").split("/");
+          //   const docName = parts.pop();
+          //   if (parts.length === 0) parts.push("grammar");
+          //   parts.push("entries");
+          //   parts.push(docName);
+          //   const partsWithMergedBase = [
+          //     parts.slice(0, -2).join("-"),
+          //     ...parts.slice(-2),
+          //   ];
+          //   return (
+          //     "https://nonbinary-hebrew-project.netlify.app/admin/#/collections/" +
+          //     partsWithMergedBase.join("/")
+          //   );
+          // },
         },
         blog: {
           routeBasePath: "uses",
@@ -73,7 +73,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           // editUrl: ({ blogDirPath, blogPath, permalink, locale }) =>
           //   `https://nonbinary-hebrew-project.netlify.app/admin/#/collections/${blogDirPath}/entries/${blogPath.replace(
-          //     ".md",
+          //     ".mdx",
           //     ""
           //   )}`,
           // Useful options to enforce blogging best practices
