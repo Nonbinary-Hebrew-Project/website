@@ -74,6 +74,14 @@ collections:
           media_library: { config: { multiple: false } },
           hint: "Only add PDF-type files. Use <PdfViewer frontMatter={frontMatter} /> to embed the PDF in the body.",
         }
+      - {
+          label: "PDF Files",
+          name: "pdf_files",
+          widget: "file",
+          required: false,
+          media_library: { config: { multiple: true } },
+          hint: "Only add PDF-type files. Use <PdfViewer frontMatter={frontMatter} /> to embed the PDFs in the body.",
+        }
       - { name: slug, label: Slug, widget: string }
       - label: "Tags"
         name: "tags"
