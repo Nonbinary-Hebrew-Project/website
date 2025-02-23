@@ -49,7 +49,7 @@ function WordTranslation({ children }) {
 
 export default function InsideTranslation({ children, isOnlyWord }) {
   return (
-    <span>
+    <p>
       {children
         .trim()
         .split(" ")
@@ -88,9 +88,8 @@ export default function InsideTranslation({ children, isOnlyWord }) {
             )}
 
             <WordTranslation>{word}</WordTranslation>
-            <br />
           </span>
         ))}
-    </span>
+    </p>
   );
 }

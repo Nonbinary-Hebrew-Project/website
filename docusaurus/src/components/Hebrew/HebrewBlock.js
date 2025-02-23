@@ -26,8 +26,8 @@ export default function HebrewBlock({ children }) {
   };
 
   return (
-    <>
-      <span
+    <div style={{padding: "1rem 0 1rem 0"}}>
+      <p
         dir="rtl"
         style={{
           backgroundColor: "lightgrey",
@@ -35,10 +35,12 @@ export default function HebrewBlock({ children }) {
           color: "black",
           fontSize: "1.5rem",
           padding: "0.3rem",
+          maxWidth: "fit-content",
+          margin: "0",
         }}
       >
         {children}
-      </span>
+      </p>
       {/* <button
         style={{
           backgroundColor: "lightblue",
@@ -73,26 +75,25 @@ export default function HebrewBlock({ children }) {
       </button> */}
       {cookies.nbhp_transliterate && (
         <>
-          <br />
-          <span
+          <p
             style={{
               backgroundColor: "lightblue",
               borderRadius: "2px",
               color: "black",
               fontSize: "1.5rem",
               padding: "0.2rem",
+              margin: "0",
             }}
           >
             {transliterate(children)}
-          </span>
+          </p>
         </>
       )}
       {cookies.nbhp_translate && (
         <>
-          <br />
           <InsideTranslation>{children}</InsideTranslation>
         </>
       )}
-    </>
+    </div>
   );
 }
