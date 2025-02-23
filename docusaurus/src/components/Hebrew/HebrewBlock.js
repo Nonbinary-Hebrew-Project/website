@@ -26,7 +26,7 @@ export default function HebrewBlock({ children }) {
   };
 
   return (
-    <div style={{padding: "1rem 0 1rem 0"}}>
+    <div style={{ padding: "0.4rem 0 0.4rem 0" }}>
       <p
         dir="rtl"
         style={{

@@ -49,7 +49,11 @@ function WordTranslation({ children }) {
 
 export default function InsideTranslation({ children, isOnlyWord }) {
   return (
-    <p>
+    <p
+      style={{
+        margin: "0",
+      }}
+    >
       {children
         .trim()
         .split(" ")
