@@ -1,4 +1,5 @@
 export default function Files({ frontMatter }) {
+  console.log(frontMatter)
   if (!frontMatter?.additional_files || !frontMatter.additional_files.length)
     return null;
   return (
