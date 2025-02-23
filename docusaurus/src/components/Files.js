@@ -8,7 +8,7 @@ export default function Files({ frontMatter }) {
     >
       <h3>Additional Files</h3>
       {frontMatter.additional_files.map((path, index) => (
-        <a href={path} key={index}>
+        <a href={path} target="_blank" key={index}>
           {path.split("/").pop()}
         </a>
       ))}
