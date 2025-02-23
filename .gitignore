@@ -132,4 +132,6 @@ dist
 # Local Netlify folder
 .netlify
 
+.vscode
+
 **/.DS_Store
