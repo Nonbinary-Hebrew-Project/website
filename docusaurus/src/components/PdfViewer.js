@@ -1,8 +1,7 @@
 export default function PdfViewer({ frontMatter }) {
   if (
     !frontMatter?.pdf_file ||
-    !frontMatter.pdf_file.length ||
-    frontMatter.pdf_file === '""'
+    !frontMatter.pdf_file.length
   )
     return null;
   return (
