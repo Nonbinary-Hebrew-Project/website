@@ -58,7 +58,7 @@ export default function InsideTranslation({ children, isOnlyWord }) {
         .trim()
         .split(" ")
         .map((word, index, array) => (
-          <span key={index}>
+          <div key={index}>
             {array.length > 1 && (
               <>
                 <span
@@ -92,7 +92,7 @@ export default function InsideTranslation({ children, isOnlyWord }) {
             )}
 
             <WordTranslation>{word}</WordTranslation>
-          </span>
+          </div>
         ))}
     </p>
   );
