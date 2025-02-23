@@ -60,6 +60,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
       - {
           name: body,
           hint: "For hebrew blocks, use <HB> צ </HB>. Multi-lin hebrew blocks are not supported.",
@@ -82,7 +83,6 @@ collections:
           media_library: { config: { multiple: true } },
           hint: "Use <Files frontMatter={frontMatter} /> to link the files in the body.",
         }
-      - { name: slug, label: Slug, widget: string }
       - label: "Tags"
         name: "tags"
         widget: "list"
