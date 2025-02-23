@@ -6,7 +6,7 @@ export default function Files({ frontMatter }) {
     <div
       style={{ display: "flex", flexDirection: "column", paddingTop: "1rem" }}
     >
-      <h3>Additional Files</h3>
+      <h2>Additional Files</h2>
       {frontMatter.additional_files.map((path, index) => (
         <a href={path} target="_blank" key={index}>
           {path.split("/").pop()}
