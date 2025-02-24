@@ -8,3 +8,4 @@ Content manager:
 
 Code changes:
 - [ ] add additional transliteration schemas and the ability to toggle between them
+- [ ] update the home page?
