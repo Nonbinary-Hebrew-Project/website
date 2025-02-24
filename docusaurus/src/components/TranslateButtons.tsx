@@ -16,13 +16,28 @@ export default function TranslateButtons({
 
   const handleTranslate = useCallback(() => {
     if (cookies.nbhp_translate) setCookie("nbhp_translate", "false");
-    else setCookie("nbhp_translate", "true");
-  }, [cookies.nbhp_translate]);
+    else if (
+      cookies.nbhp_transliterate !== undefined ||
+      cookies.nbhp_translate !== undefined
+    )
+      setCookie("nbhp_translate", "true");
+    else if (
+      cookies.nbhp_transliterate !== undefined ||
+      confirm("This feature uses a small functional cookie, ok?")
+    )
+      setCookie("nbhp_translate", "true");
+  }, [cookies]);
 
   const handleTransliterate = useCallback(() => {
     if (cookies.nbhp_transliterate) setCookie("nbhp_transliterate", "false");
-    else setCookie("nbhp_transliterate", "true");
-  }, [cookies.nbhp_transliterate]);
+    else if (
+      cookies.nbhp_transliterate !== undefined ||
+      cookies.nbhp_translate !== undefined
+    )
+      setCookie("nbhp_transliterate", "true");
+    else if (confirm("This feature uses a functional cookie, ok?"))
+      setCookie("nbhp_transliterate", "true");
+  }, [cookies]);
   // setCookie("nbhp_transliterate", "fdsa");
   const Comp = isDropdownItem ? "li" : "div";
   return (

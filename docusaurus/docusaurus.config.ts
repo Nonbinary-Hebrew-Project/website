@@ -132,6 +132,15 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "Get in touch",
+          items: [
+            {
+              label: "Contact form",
+              href: "/about#contact-form",
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Nonbinary Hebrew Project`,
     },
