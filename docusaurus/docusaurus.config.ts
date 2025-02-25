@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Nonbinary Hebrew Project",
-  tagline: "New grammar, old traditions",
+  tagline: "Shifting paradigms of power through innovating new language-ways of relating",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -35,6 +35,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          path:'docs/grammar',
+          routeBasePath: 'grammar',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: ({
@@ -87,6 +89,17 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resources',
+        path: 'docs/resources',
+        routeBasePath: 'resources',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }, 
+    ],
+  ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -106,6 +119,20 @@ const config: Config = {
         },
         { to: "/uses/tags", label: "Applied Uses", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
+        { to: "/faq", label: "FAQ", position: "left" },
+        // {
+        //   to: '/resources',
+        //   label: 'Resources',
+        //   position: 'left',
+        //   activeBaseRegex: `/resources/`,
+        // },
+        {
+          docsPluginId: "resources",
+          type: "docSidebar",
+          sidebarId: "resourcesSidebar",
+          position: "left",
+          label: "Resources",
+        },
         {
           type: "custom-translateButtons",
           position: "right",

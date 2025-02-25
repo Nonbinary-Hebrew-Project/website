@@ -8,9 +8,9 @@ media_folder: "docusaurus/static/img"
 public_folder: "/img/"
 
 collections:
-  - name: about
-    label: "about us"
-    folder: docusaurus/src/pages/about
+  - name: pages
+    label: "Pages"
+    folder: docusaurus/src/pages
     identifier_field: title
     extension: mdx
     format: frontmatter
@@ -20,14 +20,14 @@ collections:
       - { name: title, label: Title, widget: string }
       - {
           name: body,
-          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-lin hebrew blocks are not supported.",
+          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-line hebrew blocks are not supported.",
           label: Body,
           widget: markdown,
         }
 
   - name: grammar
     label: "Grammar"
-    folder: docusaurus/docs
+    folder: docusaurus/docs/grammar
     identifier_field: title
     extension: mdx
     format: frontmatter
@@ -38,7 +38,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - {
           name: body,
-          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-lin hebrew blocks are not supported.",
+          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-line hebrew blocks are not supported.",
           label: Body,
           widget: markdown,
         }
@@ -63,7 +63,7 @@ collections:
       - { name: slug, label: Slug, widget: string }
       - {
           name: body,
-          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-lin hebrew blocks are not supported.",
+          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-line hebrew blocks are not supported.",
           label: Body,
           widget: markdown,
         }
@@ -94,6 +94,31 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
           - { name: imageUrl, label: ImageURL, widget: string }
+  
+  - name: resources
+    label: "Resources"
+    folder: docusaurus/docs/resources
+    identifier_field: title
+    extension: mdx
+    format: frontmatter
+    widget: "list"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - {
+          name: body,
+          hint: "For hebrew blocks, use <HB> צ </HB>. Multi-line hebrew blocks are not supported.",
+          label: Body,
+          widget: markdown,
+        }
+      - { name: slug, label: Slug, widget: string }
+      - {
+          name: sidebar_position,
+          label: "Sidebar Position",
+          widget: number,
+          value_type: int,
+        }
   - name: dictionary
     label: "Hebrew Dictionary"
     files:

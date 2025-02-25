@@ -11,32 +11,17 @@ import { useEffect, useState } from "react";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  const [translate, setTranslate] = useState();
-  const [cookies, setCookie] = useCookies(["nbhp_transliterate"]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setTranslate(window.nbhp_transliterate);
-    };
-
-    window.addEventListener("nbhp_transliterate", handleResize);
-
-    return () => {
-      window.removeEventListener("nbhp_transliterate", handleResize);
-    };
-  }, []);
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
-          {cookies.nbhp_transliterate}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/nouns"
+            to="/grammar/nouns"
           >
             {"Get started ->"}
           </Link>
