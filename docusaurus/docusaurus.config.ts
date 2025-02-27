@@ -166,10 +166,14 @@ const config: Config = {
               label: "Contact form",
               href: "/about#contact-form",
             },
+            {
+              label: "Donate",
+              href: "/donate",
+            },
           ],
         },
       ],
-      copyright: `CreativeCommons Attribution 4.0 - Nonbinary Hebrew Project`,
+      copyright: `<a style="color: lightblue" href="https://creativecommons.org/licenses/by/4.0/">CreativeCommons Attribution 4.0</a> - Nonbinary Hebrew Project`,
     },
     prism: {
       theme: prismThemes.github,
