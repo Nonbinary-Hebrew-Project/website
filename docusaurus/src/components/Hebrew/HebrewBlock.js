@@ -26,7 +26,8 @@ export default function HebrewBlock({ children }) {
   };
 
   return (
-    <div style={{ padding: "0.4rem 0 0.4rem 0" }}>
+    <div style={{ padding: "0.4rem 0 0.4rem 0"}}>
+    <div style={{ maxWidth: "fit-content" }}>
       <p
         dir="rtl"
         style={{
@@ -35,60 +36,28 @@ export default function HebrewBlock({ children }) {
           color: "black",
           fontSize: "1.5rem",
           padding: "0.3rem",
-          maxWidth: "fit-content",
+          // maxWidth: "fit-content",
           margin: "0",
         }}
       >
         {children}
       </p>
-      {/* <button
-        style={{
-          backgroundColor: "lightblue",
-          borderRadius: "20px",
-          borderStyle: "solid",
-          borderColor: "black",
-          borderWidth: "1px",
-          color: "black",
-          padding: "0.2rem",
-          marginLeft: "0.5rem",
-          cursor: "pointer",
-        }}
-        onClick={handleTransliterate}
-      >
-        transliterate
-      </button>
-      <button
-        style={{
-          backgroundColor: "lightgreen",
-          borderRadius: "20px",
-          borderStyle: "solid",
-          borderColor: "black",
-          borderWidth: "1px",
-          color: "black",
-          padding: "0.2rem",
-          marginLeft: "0.5rem",
-          cursor: "pointer",
-        }}
-        onClick={handleTranslate}
-      >
-        translate
-      </button> */}
       {cookies.nbhp_transliterate && (
-        <>
-          <p
-            style={{
-              backgroundColor: "lightblue",
-              borderRadius: "2px",
-              color: "black",
-              fontSize: "1.5rem",
-              padding: "0.2rem",
-              margin: "0",
-            }}
-          >
-            {transliterate(children)}
-          </p>
-        </>
+        <p
+          style={{
+            backgroundColor: "lightblue",
+            borderRadius: "2px",
+            color: "black",
+            fontSize: "1.5rem",
+            padding: "0.2rem",
+            // maxWidth: "fit-content",
+            margin: "0",
+          }}
+        >
+          {transliterate(children)}
+        </p>
       )}
+      </div>
       {cookies.nbhp_translate && (
         <>
           <InsideTranslation>{children}</InsideTranslation>

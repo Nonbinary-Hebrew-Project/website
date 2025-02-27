@@ -119,20 +119,20 @@ const config: Config = {
         },
         { to: "/uses/tags", label: "Applied Uses", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
-        { to: "/faq", label: "FAQ", position: "left" },
+        // { to: "/faq", label: "FAQ", position: "left" },
         // {
         //   to: '/resources',
         //   label: 'Resources',
         //   position: 'left',
         //   activeBaseRegex: `/resources/`,
         // },
-        {
-          docsPluginId: "resources",
-          type: "docSidebar",
-          sidebarId: "resourcesSidebar",
-          position: "left",
-          label: "Resources",
-        },
+        // {
+        //   docsPluginId: "resources",
+        //   type: "docSidebar",
+        //   sidebarId: "resourcesSidebar",
+        //   position: "left",
+        //   label: "Resources",
+        // },
         {
           type: "custom-translateButtons",
           position: "right",
