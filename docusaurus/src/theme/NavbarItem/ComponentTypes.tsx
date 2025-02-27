@@ -10,7 +10,6 @@ import DocsVersionDropdownNavbarItem from "@theme/NavbarItem/DocsVersionDropdown
 
 import type { ComponentTypesObject } from "@theme/NavbarItem/ComponentTypes";
 import TranslateButtons from "@site/src/components/TranslateButtons";
-import DonateButton from "@site/src/components/DonateButton";
 
 const ComponentTypes: ComponentTypesObject = {
   default: DefaultNavbarItem,
