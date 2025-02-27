@@ -71,7 +71,7 @@ export default function TranslateButtons({
           transliterations: {cookies.nbhp_transliterate ? "on" : "off"}
         </button>
       </Comp>
-      <Comp
+      {/* <Comp
         className={clsx(
           {
             navbar__item: !mobile && !isDropdownItem,
@@ -99,7 +99,7 @@ export default function TranslateButtons({
         >
           translations: {cookies.nbhp_translate ? "on" : "off"}
         </button>
-      </Comp>
+      </Comp> */}
     </>
   );
 }
