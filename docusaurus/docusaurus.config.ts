@@ -169,7 +169,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nonbinary Hebrew Project`,
+      copyright: `CreativeCommons Attribution 4.0 - Nonbinary Hebrew Project`,
     },
     prism: {
       theme: prismThemes.github,
