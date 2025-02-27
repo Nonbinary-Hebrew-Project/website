@@ -121,12 +121,6 @@ const config: Config = {
         { to: "/about", label: "About Us", position: "left" },
         // { to: "/faq", label: "FAQ", position: "left" },
         // {
-        //   to: '/resources',
-        //   label: 'Resources',
-        //   position: 'left',
-        //   activeBaseRegex: `/resources/`,
-        // },
-        // {
         //   docsPluginId: "resources",
         //   type: "docSidebar",
         //   sidebarId: "resourcesSidebar",

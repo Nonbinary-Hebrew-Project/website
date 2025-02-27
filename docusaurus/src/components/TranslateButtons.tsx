@@ -35,10 +35,9 @@ export default function TranslateButtons({
       cookies.nbhp_translate !== undefined
     )
       setCookie("nbhp_transliterate", "true");
-    else if (confirm("This feature uses a functional cookie, ok?"))
+    else //if (confirm("This feature uses a functional cookie, ok?"))
       setCookie("nbhp_transliterate", "true");
   }, [cookies]);
-  // setCookie("nbhp_transliterate", "fdsa");
   const Comp = isDropdownItem ? "li" : "div";
   return (
     <>
