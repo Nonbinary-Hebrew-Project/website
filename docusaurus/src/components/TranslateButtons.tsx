@@ -13,30 +13,11 @@ export default function TranslateButtons({
 }: Props): ReactNode {
   const [translit, setTranslit] = useLocalStorage(translitStorageKey, translitOptions[0]);
 
-  // const [cookies, setCookie] = useCookies([
-  //   "nbhp_transliterate",
-  //   "nbhp_translate",
-  // ]);
-
   useEffect(() => {
     // handle deprecated values
     if (translitOptions.indexOf(translit) === -1)
       setTranslit(translitOptions[0]);
   }, []);
-
-  // const handleTranslate = useCallback(() => {
-  //   if (cookies.nbhp_translate) setCookie("nbhp_translate", "false");
-  //   else if (
-  //     cookies.nbhp_transliterate !== undefined ||
-  //     cookies.nbhp_translate !== undefined
-  //   )
-  //     setCookie("nbhp_translate", "true");
-  //   else if (
-  //     cookies.nbhp_transliterate !== undefined ||
-  //     confirm("This feature uses a small functional cookie, ok?")
-  //   )
-  //     setCookie("nbhp_translate", "true");
-  // }, [cookies]);
 
   const handleTransliterate = useCallback(() => {
     const newValue =
@@ -44,14 +25,6 @@ export default function TranslateButtons({
         (translitOptions.indexOf(translit) + 1) % translitOptions.length
       ];
     setTranslit(newValue);
-    // if (cookies.nbhp_transliterate) setCookie("nbhp_transliterate", "false");
-    // else if (
-    //   cookies.nbhp_transliterate !== undefined ||
-    //   cookies.nbhp_translate !== undefined
-    // )
-    //   setCookie("nbhp_transliterate", "true");
-    //if (confirm("This feature uses a functional cookie, ok?"))
-    // else setCookie("nbhp_transliterate", "true");
   }, [translit]);
   const Comp = isDropdownItem ? "li" : "div";
   return (

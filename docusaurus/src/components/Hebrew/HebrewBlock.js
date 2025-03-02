@@ -28,7 +28,6 @@ export default function HebrewBlock({ children }) {
             color: "black",
             fontSize: "1.5rem",
             padding: "0.3rem",
-            // maxWidth: "fit-content",
             margin: "0",
           }}
         >
