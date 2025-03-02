@@ -37,7 +37,7 @@ export default function HebrewBlock({ children }) {
           {/* for search indexing */}
           {transliterate(children, Schemas.sblSimple)}
         </div>
-        {translit && (
+        {translit !== translitOptions[0] && (
           <p
             style={{
               backgroundColor: "lightblue",
