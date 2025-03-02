@@ -9,3 +9,4 @@ Content manager:
 Code changes:
 - [ ] update the home page?
 - [ ] make HebrewBlock respect dark mode better
+- [ ] improve CMS preview https://decapcms.org/docs/customization/
