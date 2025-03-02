@@ -1,11 +1,12 @@
-import React, { useCallback, useState } from "react";
-import { Schema, transliterate } from "hebrew-transliteration";
+import React from "react";
+import { transliterate } from "hebrew-transliteration";
 import * as Schemas from "hebrew-transliteration/schemas";
 import InsideTranslation from "./InsideTranslation";
-import { useCookies } from "react-cookie";
+import { useLocalStorage } from "usehooks-ts";
+import { translitOptions, translitStorageKey } from "../constants";
 
 export default function HebrewBlock({ children }) {
-  const [cookies] = useCookies(["nbhp_transliterate", "nbhp_translate"]);
+  const [translit] = useLocalStorage(translitStorageKey, translitOptions[0]);
 
   const srOnly = {
     position: "absolute",
@@ -37,7 +38,7 @@ export default function HebrewBlock({ children }) {
           {/* for search indexing */}
           {transliterate(children, Schemas.sblSimple)}
         </div>
-        {cookies.nbhp_transliterate && (
+        {translit && (
           <p
             style={{
               backgroundColor: "lightblue",
@@ -49,11 +50,11 @@ export default function HebrewBlock({ children }) {
               margin: "0",
             }}
           >
-            {transliterate(children, Schemas[cookies["nbhp_transliterate"]])}
+            {transliterate(children, Schemas[translit])}
           </p>
         )}
       </div>
-      {cookies.nbhp_translate && (
+      {false && (
         <>
           <InsideTranslation>{children}</InsideTranslation>
         </>
