@@ -4,7 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Nonbinary Hebrew Project",
-  tagline: "Shifting paradigms of power through innovating new language-ways of relating",
+  tagline:
+    "Shifting paradigms of power through innovating new language-ways of relating",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -35,8 +36,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          path:'docs/grammar',
-          routeBasePath: 'grammar',
+          path: "docs/grammar",
+          routeBasePath: "grammar",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: ({
@@ -90,14 +91,17 @@ const config: Config = {
     ],
   ],
   plugins: [
+    [ require.resolve('docusaurus-lunr-search'), {
+      languages: ['en', 'he'] // language codes
+    }],
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'resources',
-        path: 'docs/resources',
-        routeBasePath: 'resources',
-        sidebarPath: require.resolve('./sidebars.js'),
-      }, 
+        id: "resources",
+        path: "docs/resources",
+        routeBasePath: "resources",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
     ],
   ],
 

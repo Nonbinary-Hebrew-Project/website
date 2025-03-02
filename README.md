@@ -14,7 +14,7 @@ If deployment isn't working, the build is probably broken due to a syntax error 
 You can check the status and diagnose it by visiting the Actions tab above here in the Github repo.
 
 ## Under the hood
-We use Docusaurus as our static site generator.
+We use Docusaurus as our static site generator, with a Lunr plugin for client-side search.
 
 We use DecapCMS as our CMS, which relies on Github authentication.
 
