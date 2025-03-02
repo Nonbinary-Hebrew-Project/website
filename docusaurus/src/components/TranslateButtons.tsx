@@ -4,7 +4,17 @@ import type { Props } from "@theme/NavbarItem/HtmlNavbarItem";
 import clsx from "clsx";
 import * as Schemas from "hebrew-transliteration/schemas";
 
-const translitOptions = ["false", ...Object.keys(Schemas)];
+// tiberian is omitted because it caused crashes, something about nuqqud missing
+const translitOptions = [
+  "false",
+  "brillAcademic",
+  "brillSimple",
+  "sblAcademicSpirantization",
+  "sblSimple",
+  "michiganClaremont",
+  "romaniote",
+  "jss",
+];
 
 export default function TranslateButtons({
   value,
@@ -17,9 +27,10 @@ export default function TranslateButtons({
     "nbhp_translate",
   ]);
 
-  useEffect(() => { // handle deprecated "true" value
-    if (cookies["nbhp_transliterate"] === true)
-      setCookie("nbhp_transliterate", "false");
+  useEffect(() => {
+    // handle deprecated values
+    if (translitOptions.indexOf(cookies["nbhp_transliterate"]) === -1)
+      setCookie("nbhp_transliterate", translitOptions[0]);
   }, []);
 
   const handleTranslate = useCallback(() => {
