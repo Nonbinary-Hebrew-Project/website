@@ -35,7 +35,7 @@ export default function HebrewBlock({ children }) {
         </p>
         <div style={{ display: "none" }}>
           {/* for search indexing */}
-          {transliterate(children, Schemas.sblSimple)}
+          {children && transliterate(children, Schemas.sblSimple)}
         </div>
         {translit !== translitOptions[0] && (
           <p
@@ -49,15 +49,15 @@ export default function HebrewBlock({ children }) {
               margin: "0",
             }}
           >
-            {transliterate(children, Schemas[translit])}
+            {children && transliterate(children, Schemas[translit])}
           </p>
         )}
       </div>
-      {false && (
+      {/* {false && (
         <>
           <InsideTranslation>{children}</InsideTranslation>
         </>
-      )}
+      )} */}
     </div>
   );
 }

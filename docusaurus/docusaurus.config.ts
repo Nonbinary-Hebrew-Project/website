@@ -158,6 +158,15 @@ const config: Config = {
           ],
         },
         {
+          title: "Tools",
+          items: [
+            {
+              label: "Transliteration Tool",
+              href: "/transliterate",
+            },
+          ],
+        },
+        {
           title: "Get in touch",
           items: [
             {
