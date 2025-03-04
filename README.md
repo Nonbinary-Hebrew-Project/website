@@ -2,7 +2,7 @@
 
 This is the repository for the Nonbinary Hebrew Project website.
 
-Most copy editing can be done using the Content Management System (CMS): https://nonbinary-hebrew-project.netlify.app/admin/
+Most copy editing can be done using the Content Management System (CMS): https://nonbinaryhebrew.com/admin/
 
 If you want to add a new collection to the CMS, which is required for things like adding a new subsection to the Grammar docs,
 you will need to edit the file `docusaurus/static/config.yml` manually.
