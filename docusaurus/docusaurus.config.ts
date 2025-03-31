@@ -111,7 +111,7 @@ const config: Config = {
     navbar: {
       title: "Nonbinary Hebrew Project",
       logo: {
-        alt: "My Site Logo",
+        alt: "logo with aleph and transgender symbol",
         src: "img/trans-aleph.png",
       },
       items: [
@@ -121,7 +121,7 @@ const config: Config = {
           position: "left",
           label: "Grammar",
         },
-        { to: "/uses/tags", label: "Applied Uses", position: "left" },
+        { to: "/uses/tags", label: "NBHP in Practice", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
         // { to: "/faq", label: "FAQ", position: "left" },
         // {
