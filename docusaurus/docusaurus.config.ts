@@ -123,6 +123,7 @@ const config: Config = {
         },
         { to: "/uses/tags", label: "NBHP in Practice", position: "left" },
         { to: "/about", label: "About Us", position: "left" },
+        { to: "/calendar", label: "Calendar", position: "left" },
         // { to: "/faq", label: "FAQ", position: "left" },
         // {
         //   docsPluginId: "resources",
