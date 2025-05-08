@@ -111,8 +111,8 @@ const config: Config = {
     navbar: {
       title: "Nonbinary Hebrew Project",
       logo: {
-        alt: "logo with aleph and transgender symbol",
-        src: "img/trans-aleph.png",
+        alt: "",
+        src: "img/nbhp-logo-1-dark-blue-logo-.png",
       },
       items: [
         {
