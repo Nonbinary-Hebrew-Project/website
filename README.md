@@ -2,9 +2,10 @@
 
 This is the repository for the Nonbinary Hebrew Project website.
 
-Most copy editing can be done using the Content Management System (CMS): https://nonbinaryhebrew.com/admin/
+If you have a github account with editing permissions on this repo, most copy editing can be done using the Content Management System (CMS): https://nonbinaryhebrew.com/admin/
 
-## Adding a new CMS Collection
+## Changes that require manual edits
+### Adding a new CMS Collection
 If you want to add a new collection to the CMS, which is required for things like adding a new subsection to the Grammar docs,
 you will need to create a new folder and edit the file  manually. This will require some understanding of how to clone a github repo or how to edit a repo in the Github UI.
 
@@ -38,7 +39,7 @@ Steps:
         }
 ```
 
-## Making a new Sidebar for a new Collection
+### Making a new Sidebar for a new Collection
 This will require some understanding if editing a Github repository using a clone or the Github UI. It will also require manually editing configuration in Typescript/Javascript.
 If you want to create a new sidebar (group of documents that can be navigated between using a left nav bar), edit `docusaurus/docusaurus.config.ts` and add a new entry in the `plugins:` section, like:
 
