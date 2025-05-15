@@ -6,7 +6,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { translitOptions, translitStorageKey } from "../constants";
 
 export default function HebrewBlock({ children }) {
-  const [translit] = useLocalStorage(translitStorageKey, translitOptions[0]);
+  const [translit] = useLocalStorage(translitStorageKey, translitOptions[0].key);
 
   const srOnly = {
     position: "absolute",
@@ -37,7 +37,7 @@ export default function HebrewBlock({ children }) {
           {/* for search indexing */}
           {children && transliterate(children, Schemas.sblSimple)}
         </div>
-        {translit !== translitOptions[0] && (
+        {translit !== translitOptions[0].key && (
           <p
             style={{
               backgroundColor: "lightblue",

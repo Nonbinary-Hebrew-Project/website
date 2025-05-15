@@ -1,5 +1,4 @@
 import { ReactNode, useCallback, useEffect, useState } from "react";
-import { useCookies } from "react-cookie";
 import type { Props } from "@theme/NavbarItem/HtmlNavbarItem";
 import clsx from "clsx";
 import { translitOptions, translitStorageKey } from "./constants";
@@ -11,20 +10,17 @@ export default function TranslateButtons({
   mobile = false,
   isDropdownItem = false,
 }: Props): ReactNode {
-  const [translit, setTranslit] = useLocalStorage(translitStorageKey, translitOptions[0]);
+  const [translit, setTranslit] = useLocalStorage(translitStorageKey, translitOptions[0].key);
+  console.log(translit)
 
   useEffect(() => {
     // handle deprecated values
-    if (translitOptions.indexOf(translit) === -1)
-      setTranslit(translitOptions[0]);
+    if (!translitOptions.find(option => option.key === translit))
+      setTranslit(translitOptions[0].key);
   }, []);
 
-  const handleTransliterate = useCallback(() => {
-    const newValue =
-      translitOptions[
-        (translitOptions.indexOf(translit) + 1) % translitOptions.length
-      ];
-    setTranslit(newValue);
+  const handleTransliterate = useCallback((event) => {
+    setTranslit(translitOptions[event.target.selectedIndex].key);
   }, [translit]);
   const Comp = isDropdownItem ? "li" : "div";
   return (
@@ -38,11 +34,15 @@ export default function TranslateButtons({
           className
         )}
       >
-        <button
+        <label htmlFor="translit-select" style={{
+          marginLeft: mobile ? "0.5rem" : "",
+          marginTop: mobile ? "10rem" : "",
+        }}>Transliteration:</label>
+        <select id="translit-select"
           style={{
-            backgroundColor:
-              translit !== translitOptions[0] ? "lightblue" : "lightgrey",
-            borderRadius: "20px",
+            // backgroundColor:
+            //   translit !== translitOptions[0] ? "lightblue" : "lightgrey",
+            borderRadius: "0.3rem",
             borderStyle: "solid",
             borderColor: "black",
             borderWidth: "1px",
@@ -50,12 +50,15 @@ export default function TranslateButtons({
             padding: "0.3rem 0.5rem 0.3rem 0.5rem",
             cursor: "pointer",
             fontSize: "1rem",
-            marginLeft: mobile ? "0.5rem" : "",
+            marginLeft: "0.5rem",
           }}
-          onClick={handleTransliterate}
+          onChange={handleTransliterate}
+          value={translitOptions.find(options => options.key === translit)?.label}
         >
-          transliterations: {translit}
-        </button>
+          {translitOptions.map(option => {
+            return <option key={option.key}>{option.label}</option>
+          })}
+        </select>
       </Comp>
       {/* <Comp
         className={clsx(
