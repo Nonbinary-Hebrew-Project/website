@@ -18,7 +18,7 @@ collections:
     extension: mdx
     format: frontmatter
     widget: "list"
-    create: false
+    create: true
     fields:
       - { name: title, label: Title, widget: string }
       - {
@@ -52,6 +52,7 @@ collections:
           widget: number,
           value_type: int,
         }
+
   - name: blog
     label: "Applied Uses"
     folder: docusaurus/blog
@@ -97,7 +98,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
           - { name: imageUrl, label: ImageURL, widget: string }
-  
+
   - name: resources
     label: "Resources"
     folder: docusaurus/docs/resources
@@ -122,6 +123,7 @@ collections:
           widget: number,
           value_type: int,
         }
+
   - name: dictionary
     label: "Hebrew Dictionary"
     files:
@@ -138,3 +140,23 @@ collections:
             fields:
               - { label: Definition, name: def, widget: string }
               - { label: Lemma, name: lemma, widget: string }
+
+  - name: config-dropdowns
+    label: "Configure Dropdowns"
+    folder: docusaurus/config/dropdowns
+    identifier_field: label
+    extension: json
+    widget: "list"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { name: label, label: "Dropdown Label", widget: string }
+      - {
+          name: items,
+          label: Items,
+          widget: "list",
+          fields: [
+            {name: "to", label: "to", widget: string},
+            {name: "label", label: "label", widget: string}
+          ]
+        }
