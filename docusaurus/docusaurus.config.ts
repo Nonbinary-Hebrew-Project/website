@@ -115,23 +115,17 @@ const config: Config = {
         src: "img/logo.png",
       },
       items: [
+        ...require("./config/dropdowns.json").dropdowns.map(dropdown => ({
+            type: "dropdown",
+            position: "left",
+            label: dropdown.label,
+            items: dropdown.items
+        })),
         {
           type: "docSidebar",
           sidebarId: "grammarSidebar",
           position: "left",
           label: "Grammar",
-        },
-        {
-          type: "dropdown",
-          position: "left",
-          label: require("./config/dropdowns/about-us.json").label,
-          items: require("./config/dropdowns/about-us.json").items
-        },
-        {
-          type: "dropdown",
-          position: "left",
-          label: require("./config/dropdowns/publicity.json").label,
-          items: require("./config/dropdowns/publicity.json").items
         },
         { to: "/uses/tags", label: "NBHP in Practice", position: "left" },
         // { to: "/faq", label: "FAQ", position: "left" },

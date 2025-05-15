@@ -143,22 +143,25 @@ collections:
               - { label: Definition, name: def, widget: string }
               - { label: Lemma, name: lemma, widget: string }
 
-  - name: config-dropdowns
-    label: "Configure Dropdowns"
-    folder: docusaurus/config/dropdowns
-    identifier_field: label
-    extension: json
-    widget: "list"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - { name: label, label: "Dropdown Label", widget: string }
-      - {
-          name: items,
-          label: Items,
-          widget: "list",
-          fields: [
-            {name: "label", label: "label", widget: string},
-            {name: "to", label: "to", widget: string},
-          ]
-        }
+  - name: config
+    label: "Configuration"
+    files:
+      - label: "Dropdowns"
+        name: "dropdownconfig"
+        file: "docusaurus/config/dropdowns.json"
+        fields:
+        - label: Dropdowns
+          name: dropdowns
+          widget: list
+          label_singular: "dropdown"
+          fields:
+          - { name: label, label: "Dropdown Label", widget: string }
+          - {
+              name: items,
+              label: Items,
+              widget: "list",
+              fields: [
+                {name: "label", label: "label", widget: string},
+                {name: "to", label: "to", widget: string},
+              ]
+            }
