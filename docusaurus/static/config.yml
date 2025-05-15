@@ -19,8 +19,10 @@ collections:
     format: frontmatter
     widget: "list"
     create: true
+    slug: "{{slug}}"
     fields:
       - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
       - {
           name: body,
           hint: "For hebrew blocks, use <HB> צ </HB>. Multi-line hebrew blocks are not supported.",
