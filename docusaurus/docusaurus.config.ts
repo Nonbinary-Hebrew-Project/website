@@ -112,7 +112,7 @@ const config: Config = {
       title: "Nonbinary Hebrew Project",
       logo: {
         alt: "",
-        src: "img/nbhp-logo-1-dark-blue-logo-.png",
+        src: "img/logo.png",
       },
       items: [
         {
