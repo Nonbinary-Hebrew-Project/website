@@ -4,6 +4,12 @@ This is the repository for the Nonbinary Hebrew Project website.
 
 If you have a github account with editing permissions on this repo, most copy editing can be done using the Content Management System (CMS): https://nonbinaryhebrew.com/admin/
 
+## Deployment
+Deployment happens automatically on push to main, which happens automatically when publishing from the CMS.
+
+If deployment isn't working, the build is probably broken due to a syntax error introduced.
+You can check the status and diagnose it by visiting the Actions tab above here in the Github repo.
+
 ## Changes that require manual edits
 ### Adding a new CMS Collection
 If you want to add a new collection to the CMS, which is required for things like adding a new subsection to the Grammar docs,
@@ -64,12 +70,6 @@ Then you can link to it in the top bar by adding a new entry to the `navbar: ite
           label: "Resources",
         },
 ```
-
-## Deployment
-Deployment happens automatically on push to main, which happens automatically when publishing from the CMS.
-
-If deployment isn't working, the build is probably broken due to a syntax error introduced.
-You can check the status and diagnose it by visiting the Actions tab above here in the Github repo.
 
 ## Under the hood
 We use Docusaurus as our static site generator, with a Lunr plugin for client-side search.
