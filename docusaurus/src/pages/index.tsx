@@ -17,7 +17,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-          <img src="/img/rainbow_aleph.jpg" className=""/>
+        <img src="/img/rainbow_aleph.jpg" alt="The Hebrew letter Aleph in several different fonts in rainbow colors against the background of a clear sky."/>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
