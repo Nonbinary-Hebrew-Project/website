@@ -126,22 +126,22 @@ collections:
           value_type: int,
         }
 
-  - name: dictionary
-    label: "Hebrew Dictionary"
-    files:
-      - label: "Hebrew Dictionary"
-        name: "dictionaryjson"
-        file: "docusaurus/src/components/Hebrew/nonbinary-hebrew-dictionary.json"
-        fields:
-          - label: Translations
-            name: translations
-            widget: list
-            add_to_top: true
-            label_singular: "translation"
-            summary: "{{lemma}} {{def}}"
-            fields:
-              - { label: Definition, name: def, widget: string }
-              - { label: Lemma, name: lemma, widget: string }
+  # - name: dictionary
+  #   label: "Hebrew Dictionary"
+  #   files:
+  #     - label: "Hebrew Dictionary"
+  #       name: "dictionaryjson"
+  #       file: "docusaurus/src/components/Hebrew/nonbinary-hebrew-dictionary.json"
+  #       fields:
+  #         - label: Translations
+  #           name: translations
+  #           widget: list
+  #           add_to_top: true
+  #           label_singular: "translation"
+  #           summary: "{{lemma}} {{def}}"
+  #           fields:
+  #             - { label: Definition, name: def, widget: string }
+  #             - { label: Lemma, name: lemma, widget: string }
 
   - name: config
     label: "Configuration"
