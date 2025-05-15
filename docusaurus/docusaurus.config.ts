@@ -148,10 +148,10 @@ const config: Config = {
               label: "Github",
               href: "https://github.com/Nonbinary-Hebrew-Project/website",
             },
-            {
-              label: "Translations Dictionary",
-              href: "https://github.com/Nonbinary-Hebrew-Project/website/blob/main/docusaurus/src/components/Hebrew/nonbinary-hebrew-dictionary.json",
-            },
+            // {
+            //   label: "Translations Dictionary",
+            //   href: "https://github.com/Nonbinary-Hebrew-Project/website/blob/main/docusaurus/src/components/Hebrew/nonbinary-hebrew-dictionary.json",
+            // },
             {
               label: "Content Manager",
               href: "https://nonbinary-hebrew-project.netlify.app/admin/",

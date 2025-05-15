@@ -1,3 +1,6 @@
+# This is the DecapCMS config file.
+# https://decapcms.org/docs/intro/
+
 backend:
   name: github
   branch: main
