@@ -9,10 +9,16 @@ import { useCookies } from "react-cookie";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 
-function HomepageHeader() {
+export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <Layout
+      title={`${siteConfig.title}`}
+      description="We are building a bigger tent for nonbinary Jews through a third-gender grammar systematics for Hebrew, guided by our Torah and Talmud that teach us to rejoice that which cannot be neatly categorized."
+    >
+      {/* <HomepageHeader /> */}
+      <main>
+      <div className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         
       <iframe
@@ -23,19 +29,8 @@ function HomepageHeader() {
         sandbox="allow-forms allow-scripts allow-top-navigation allow-same-origin allow-popups allow-popups-to-escape-sandbox"
       ></iframe>
       </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="We are building a bigger tent for nonbinary Jews through a third-gender grammar systematics for Hebrew, guided by our Torah and Talmud that teach us to rejoice that which cannot be neatly categorized."
-    >
-      <HomepageHeader />
-      <main>{/* <HomepageFeatures /> */}</main>
+    </div>
+      </main>
     </Layout>
   );
 }

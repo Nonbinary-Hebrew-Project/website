@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <div className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -28,7 +28,7 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
@@ -39,8 +39,7 @@ export default function Home(): JSX.Element {
     title={`${siteConfig.title}`}
     description="We are building a bigger tent for nonbinary Jews through a third-gender grammar systematics for Hebrew, guided by our Torah and Talmud that teach us to rejoice that which cannot be neatly categorized."
     >
-      <HomepageHeader />
-      <main>{/* <HomepageFeatures /> */}</main>
+      <main>{<HomepageHeader />}</main>
     </Layout>
   );
 }
