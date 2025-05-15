@@ -127,8 +127,13 @@ const config: Config = {
           label: require("./config/dropdowns/about-us.json").label,
           items: require("./config/dropdowns/about-us.json").items
         },
+        {
+          type: "dropdown",
+          position: "left",
+          label: require("./config/dropdowns/publicity.json").label,
+          items: require("./config/dropdowns/publicity.json").items
+        },
         { to: "/uses/tags", label: "NBHP in Practice", position: "left" },
-        { to: "/calendar", label: "Calendar", position: "left" },
         // { to: "/faq", label: "FAQ", position: "left" },
         // {
         //   docsPluginId: "resources",

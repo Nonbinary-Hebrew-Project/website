@@ -156,7 +156,7 @@ collections:
           label: Items,
           widget: "list",
           fields: [
+            {name: "label", label: "label", widget: string},
             {name: "to", label: "to", widget: string},
-            {name: "label", label: "label", widget: string}
           ]
         }
