@@ -40,16 +40,7 @@ export default function TranslateButtons({
         }}>Transliteration:</label>
         <select id="translit-select"
           style={{
-            // backgroundColor:
-            //   translit !== translitOptions[0] ? "lightblue" : "lightgrey",
-            borderRadius: "0.3rem",
-            borderStyle: "solid",
-            borderColor: "black",
-            borderWidth: "1px",
-            color: "black",
             padding: "0.3rem 0.5rem 0.3rem 0.5rem",
-            cursor: "pointer",
-            fontSize: "1rem",
             marginLeft: "0.5rem",
           }}
           onChange={handleTransliterate}
