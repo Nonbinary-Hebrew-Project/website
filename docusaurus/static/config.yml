@@ -126,23 +126,6 @@ collections:
           value_type: int,
         }
 
-  # - name: dictionary
-  #   label: "Hebrew Dictionary"
-  #   files:
-  #     - label: "Hebrew Dictionary"
-  #       name: "dictionaryjson"
-  #       file: "docusaurus/src/components/Hebrew/nonbinary-hebrew-dictionary.json"
-  #       fields:
-  #         - label: Translations
-  #           name: translations
-  #           widget: list
-  #           add_to_top: true
-  #           label_singular: "translation"
-  #           summary: "{{lemma}} {{def}}"
-  #           fields:
-  #             - { label: Definition, name: def, widget: string }
-  #             - { label: Lemma, name: lemma, widget: string }
-
   - name: config
     label: "Configuration"
     files:
@@ -179,3 +162,13 @@ collections:
           - { name: description, label: "Description", widget: "text" }
           - { name: ctaText, label: "Call to Action Text", widget: "string" }
           - { name: ctaLink, label: "Call to Action Link", widget: "string" }
+      - label: "Homepage Header"
+        name: "homepageheaderconfig"
+        file: "docusaurus/config/homepage-header.json"
+        fields:
+        - { name: title, label: "Title", widget: string }
+        - { name: subtitle, label: "Subtitle", widget: string }
+        - { name: ctaText, label: "Call to Action Text", widget: string }
+        - { name: ctaLink, label: "Call to Action Link", widget: string }
+        - { name: heroImage, label: "Hero Image", widget: image }
+        - { name: heroImageAlt, label: "Hero Image Alt Text", widget: string }

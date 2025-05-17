@@ -1,11 +1,4 @@
 {
   "highlightedContent": [
-    {
-      "image": "/img/lior.png",
-      "headline": "Featured Content Title",
-      "description": "A brief description of the featured content",
-      "ctaText": "Learn More",
-      "ctaLink": "/path/to/content"
-    }
   ]
 }

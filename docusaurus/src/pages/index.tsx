@@ -9,23 +9,23 @@ import { useCookies } from "react-cookie";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import featuredContentData from "@site/config/featured-content.json";
+import homepageHeaderData from "@site/config/homepage-header.json";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <div className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          {homepageHeaderData.title}
         </Heading>
-        <img src="/img/rainbow_aleph.jpg" alt="The Hebrew letter Aleph in several different fonts in rainbow colors against the background of a clear sky."/>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <img src={homepageHeaderData.heroImage} alt={homepageHeaderData.heroImageAlt}/>
+        <p className="hero__subtitle">{homepageHeaderData.subtitle}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/grammar/nouns"
+            to={homepageHeaderData.ctaLink}
           >
-            {"Get started ->"}
+            {homepageHeaderData.ctaText}
           </Link>
         </div>
       </div>
