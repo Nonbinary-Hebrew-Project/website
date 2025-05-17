@@ -162,13 +162,19 @@ collections:
           - { name: description, label: "Description", widget: "text" }
           - { name: ctaText, label: "Call to Action Text", widget: "string" }
           - { name: ctaLink, label: "Call to Action Link", widget: "string" }
-      - label: "Homepage Header"
+      - label: "Homepage and Top Bar Content"
         name: "homepageheaderconfig"
         file: "docusaurus/config/homepage-header.json"
         fields:
-        - { name: title, label: "Title", widget: string }
-        - { name: subtitle, label: "Subtitle", widget: string }
+        - { name: title, label: "Homepage Title", widget: string }
+        - { name: subtitle, label: "Homepage Subtitle", widget: string }
         - { name: ctaText, label: "Call to Action Text", widget: string }
         - { name: ctaLink, label: "Call to Action Link", widget: string }
         - { name: heroImage, label: "Hero Image", widget: image }
         - { name: heroImageAlt, label: "Hero Image Alt Text", widget: string }
+        - { name: siteTitle, label: "Site Title", hint: "Top left of the screen in the top bar", widget: string }
+        - label: "Site Logo"
+          name: "siteLogo"
+          widget: "object"
+          fields:
+            - { name: src, label: "Logo Image", widget: image }

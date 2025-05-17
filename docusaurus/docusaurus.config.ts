@@ -1,11 +1,11 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import homepageHeaderConfig from "./config/homepage-header.json";
 
 const config: Config = {
-  title: "Nonbinary Hebrew Project",
-  tagline:
-    "Shifting paradigms of power through innovating new language-ways of relating",
+  title: homepageHeaderConfig.siteTitle,
+  tagline: homepageHeaderConfig.subtitle,
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -109,10 +109,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Nonbinary Hebrew Project",
+      title: homepageHeaderConfig.siteTitle,
       logo: {
-        alt: "",
-        src: "img/logo.png",
+        alt: homepageHeaderConfig.siteLogo.alt,
+        src: homepageHeaderConfig.siteLogo.src,
       },
       items: [
         ...require("./config/dropdowns.json").dropdowns.map(dropdown => ({
