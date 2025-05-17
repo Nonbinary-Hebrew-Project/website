@@ -132,6 +132,7 @@ collections:
       - label: "Dropdowns"
         name: "dropdownconfig"
         file: "docusaurus/config/dropdowns.json"
+        hint: "These determine the structure of the main nav bar."
         fields:
         - label: Dropdowns
           name: dropdowns
@@ -156,13 +157,14 @@ collections:
           name: "highlightedContent"
           widget: "list"
           label_singular: "Featured Item"
+          hint: "These items will be displayed on the home page below the header content."
           fields:
           - { name: image, label: "Image", widget: "image" }
           - { name: headline, label: "Headline", widget: "string" }
           - { name: description, label: "Description", widget: "text" }
           - { name: ctaText, label: "Call to Action Text", widget: "string" }
           - { name: ctaLink, label: "Call to Action Link", widget: "string" }
-      - label: "Homepage and Top Bar Content"
+      - label: "Homepage and Logo"
         name: "homepageheaderconfig"
         file: "docusaurus/config/homepage-header.json"
         fields:
