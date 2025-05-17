@@ -21,3 +21,49 @@
   align-items: center;
   justify-content: center;
 }
+
+.featuredContentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.featuredContentItem {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+}
+
+.featuredContentImage {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.featuredContentText {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.featuredContentText h3 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 996px) {
+  .featuredContentItem {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .featuredContentImage {
+    width: 100%;
+    height: 200px;
+  }
+}

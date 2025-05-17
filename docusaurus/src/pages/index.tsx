@@ -8,6 +8,7 @@ import { useCookies } from "react-cookie";
 
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
+import featuredContentData from "@site/config/featured-content.json";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -32,6 +33,28 @@ function HomepageHeader() {
   );
 }
 
+function FeaturedContent() {
+  return (
+    <div className={styles.featuredContentContainer}>
+      {featuredContentData.highlightedContent.map((item, index) => (
+        <div key={index} className={styles.featuredContentItem}>
+          <img src={item.image} alt={item.headline} className={styles.featuredContentImage} />
+          <div className={styles.featuredContentText}>
+            <h3>{item.headline}</h3>
+            <p>{item.description}</p>
+            <Link 
+              to={item.ctaLink} 
+              className="button button--primary"
+            >
+              {item.ctaText}
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -39,7 +62,11 @@ export default function Home(): JSX.Element {
     title={`${siteConfig.title}`}
     description="We are building a bigger tent for nonbinary Jews through a third-gender grammar systematics for Hebrew, guided by our Torah and Talmud that teach us to rejoice that which cannot be neatly categorized."
     >
-      <main>{<HomepageHeader />}</main>
+      <main>
+        <HomepageHeader />
+        {featuredContentData.highlightedContent.length
+          && <FeaturedContent />}
+      </main>
     </Layout>
   );
 }

@@ -165,3 +165,17 @@ collections:
                 {name: "to", label: "to", widget: string},
               ]
             }
+      - label: "Featured Content"
+        name: "featuredcontentconfig"
+        file: "docusaurus/config/featured-content.json"
+        fields:
+        - label: "Featured Items"
+          name: "highlightedContent"
+          widget: "list"
+          label_singular: "Featured Item"
+          fields:
+          - { name: image, label: "Image", widget: "image" }
+          - { name: headline, label: "Headline", widget: "string" }
+          - { name: description, label: "Description", widget: "text" }
+          - { name: ctaText, label: "Call to Action Text", widget: "string" }
+          - { name: ctaLink, label: "Call to Action Link", widget: "string" }
