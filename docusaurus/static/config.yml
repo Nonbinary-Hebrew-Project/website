@@ -56,7 +56,7 @@ collections:
         }
 
   - name: blog
-    label: "Applied Uses"
+    label: "NBHP In Practice"
     folder: docusaurus/blog
     identifier_field: title
     extension: mdx
