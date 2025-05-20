@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
     >
       <main>
         <HomepageHeader />
-        {featuredContentData.highlightedContent.length
+        {!!featuredContentData.highlightedContent.length
           && <FeaturedContent />}
       </main>
     </Layout>
