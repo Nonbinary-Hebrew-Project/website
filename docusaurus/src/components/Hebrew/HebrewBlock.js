@@ -21,6 +21,7 @@ export default function HebrewBlock({ children }) {
     <div style={{ padding: "0.4rem 0 0.4rem 0" }}>
       <div data-search-children style={{ maxWidth: "fit-content" }}>
         <p
+          lang="he"
           dir="rtl"
           style={{
             backgroundColor: "lightgrey",
