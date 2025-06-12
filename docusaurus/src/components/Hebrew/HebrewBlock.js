@@ -4,6 +4,9 @@ import * as Schemas from "hebrew-transliteration/schemas";
 import InsideTranslation from "./InsideTranslation";
 import { useLocalStorage } from "usehooks-ts";
 import { translitOptions, translitStorageKey } from "../constants";
+import { popularSchema } from "./popularSchema";
+
+const AllSchemas = {...Schemas, popularSchema }
 
 export default function HebrewBlock({ children }) {
   const [translit] = useLocalStorage(translitStorageKey, translitOptions[0].key);
@@ -36,7 +39,7 @@ export default function HebrewBlock({ children }) {
         </p>
         <div style={{ display: "none" }}>
           {/* for search indexing */}
-          {children && transliterate(children, Schemas.sblSimple)}
+          {!!children && transliterate(children, AllSchemas.popularSchema)}
         </div>
         {translit !== translitOptions[0].key && (
           <p
@@ -50,7 +53,7 @@ export default function HebrewBlock({ children }) {
               margin: "0",
             }}
           >
-            {children && transliterate(children, Schemas[translit])}
+            {children && transliterate(children, AllSchemas[translit])}
           </p>
         )}
       </div>
