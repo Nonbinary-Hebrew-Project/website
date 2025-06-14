@@ -1,10 +1,9 @@
 import React from "react";
-import { transliterate } from "hebrew-transliteration";
 import * as Schemas from "hebrew-transliteration/schemas";
-import InsideTranslation from "./InsideTranslation";
 import { useLocalStorage } from "usehooks-ts";
 import { translitOptions, translitStorageKey } from "../constants";
 import { popularSchema } from "./popularSchema";
+import { transliterateWrapped } from "./transliterateWrapped";
 
 const AllSchemas = {...Schemas, popularSchema }
 
@@ -39,7 +38,7 @@ export default function HebrewBlock({ children }) {
         </p>
         <div style={{ display: "none" }}>
           {/* for search indexing */}
-          {!!children && transliterate(children, AllSchemas.popularSchema)}
+          {!!children && transliterateWrapped(children, AllSchemas.popularSchema)}
         </div>
         {translit !== translitOptions[0].key && (
           <p
@@ -53,7 +52,7 @@ export default function HebrewBlock({ children }) {
               margin: "0",
             }}
           >
-            {children && transliterate(children, AllSchemas[translit])}
+            {children && transliterateWrapped(children, AllSchemas[translit])}
           </p>
         )}
       </div>
