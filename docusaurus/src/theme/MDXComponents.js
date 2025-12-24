@@ -5,6 +5,7 @@ import HebrewBlock from "@site/src/components/Hebrew/HebrewBlock";
 import PdfViewer from "../components/PdfViewer";
 import Files from "../components/Files";
 import ContactForm from "../components/ContactForm";
+import DonateButton from "../components/DonateButton";
 
 export default {
   // Re-use the default mapping
@@ -14,4 +15,5 @@ export default {
   PdfViewer,
   Files,
   ContactForm,
+  DonateButton,
 };
