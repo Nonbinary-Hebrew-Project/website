@@ -137,6 +137,11 @@ const config: Config = {
         //   label: "Resources",
         // },
         {
+          to: "/donate",
+          label: "Donate",
+          position: "left",
+        },
+        {
           type: "custom-translateButtons",
           position: "right",
         },
