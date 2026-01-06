@@ -132,10 +132,10 @@ collections:
       - label: "Dropdowns"
         name: "dropdownconfig"
         file: "docusaurus/config/dropdowns.json"
-        hint: "These determine the structure of the main nav bar."
         fields:
-        - label: Dropdowns
+        - label: Nav Bar Dropdowns
           name: dropdowns
+          hint: "These determine the structure of the main nav bar."
           widget: list
           label_singular: "dropdown"
           fields:
