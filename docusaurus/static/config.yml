@@ -11,6 +11,15 @@ media_folder: "docusaurus/static/img"
 public_folder: "/img/"
 
 collections:
+  - name: readme
+    label: "README"
+    files:
+      - label: "README"
+        name: "readme"
+        file: "README.md"
+        fields:
+          - { name: body, label: Body, widget: markdown }
+
   - name: pages
     label: "Pages"
     folder: docusaurus/src/pages
