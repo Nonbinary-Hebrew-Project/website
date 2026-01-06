@@ -4,6 +4,8 @@
 
 If you have a github account with editing permissions on this repo, most copy editing can be done using the Content Management System (CMS): [https://nonbinaryhebrew.com/admin/](https://nonbinaryhebrew.com/admin/)
 
+Admins can give new people access to the CMS by inviting their github account to our github organization [here](https://github.com/orgs/Nonbinary-Hebrew-Project/people).
+
 ## Using the CMS
 Much of the site can be edited through the CMS using the available collections:
 - **Pages** - lets you edit standalone pages, such as the Donate page and the About Us page.
