@@ -1,19 +1,39 @@
 # Nonbinary Hebrew Project
 
-This is the repository for the Nonbinary Hebrew Project website.
+[This is the repository](https://github.com/Nonbinary-Hebrew-Project/website) for the Nonbinary Hebrew Project website.
 
-If you have a github account with editing permissions on this repo, most copy editing can be done using the Content Management System (CMS): https://nonbinaryhebrew.com/admin/
+If you have a github account with editing permissions on this repo, most copy editing can be done using the Content Management System (CMS): [https://nonbinaryhebrew.com/admin/](https://nonbinaryhebrew.com/admin/)
 
-## Deployment
+## Using the CMS
+Much of the site can be edited through the CMS using the available collections:
+- **Pages** - lets you edit standalone pages, such as the Donate page and the About Us page.
+- **Grammar** - lets you edit the pages in the Grammar learning module on the site.
+- **NBHP In Practice** - lets you edit and tag the blog-like pages for applied uses of NBHP.
+- **Resources** - these pages are not currently surfaced on the site, it was a potential idea we were exploring.
+- **Configuration** - provides additional configuration options for the website, such as adding things to the Nav Bar and editing the home page content.
+
+It is recommended that you toggle the editor in the CMS to "Markdown" rather than "Rich Text" for most cases. Rich Text can be useful for adding images, but it doesn't play nicely with our hebrew formatting.
+
+We also have some special HTML-like tags that you can use for fancy formatting:
+- **`<PdfViewer frontMatter={frontMatter} />`**
+  - This is available for NBHP In Practice pages, where you can upload files directly, and then add this tag to the body to get a fancy inline PDF viewer for each uploaded file.
+- **`<HB> צ </HB>`**
+  - The Hebrew Block (HB) tag ensures that all our Hebrew is consistently formatted and highly accessible.
+  - You can only have a single line of hebrew in it, so if you need multi-line hebrew, surround each line.
+  - Because mixing left-to-right and right-to-left languages can get messy on a computer, it is recommended that you first type `<HB>  </HB>` _with 2 spaces in between_ on an english keyboard, and then type the hebrew inside the spaces with a hebrew keyboard. The space on either side of the hebrew provides buffer that helps the website parse the HB tag properly.
+- **`<DonateButton/>`**
+  - You can add this on any page to insert our donate button widget.
+
+## Diagnosing deployment issues
 Deployment happens automatically on push to main, which happens automatically when publishing from the CMS.
 
-If deployment isn't working, the build is probably broken due to a syntax error introduced.
-You can check the status and diagnose it by visiting the Actions tab above here in the Github repo.
+If deployment isn't working (you're not seeing your changes show up on the site), the build is probably broken due to a syntax error introduced.
+You can check the status and diagnose it by visiting the [Actions tab in the Github repo](https://github.com/Nonbinary-Hebrew-Project/website/actions). There you can check whether the build is succeeding or failing. If it is failing, click into it to find the error message, which should help you figure out how to fix the problem in the CMS.
 
 ## Changes that require manual edits
 ### Adding a new CMS Collection
 If you want to add a new collection to the CMS, which is required for things like adding a new subsection to the Grammar docs,
-you will need to create a new folder and edit the file  manually. This will require some understanding of how to clone a github repo or how to edit a repo in the Github UI.
+you will need to create a new folder and edit the CMS config file  manually. This will require some understanding of how to clone a github repo or how to edit a repo in the Github UI.
 
 Steps:
 1. Create a new folder inside the `docusaurus/docs` folder with at least 1 file in it to start. Put the folder inside an existing folder (such as `grammar` or `resources` to create a subsection of an existing collection; if you want to create a totally separate section with its own navigation leftbar, then you will also have to add a new Sidebar (see the following section of this readme)
