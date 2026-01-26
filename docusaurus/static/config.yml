@@ -173,7 +173,7 @@ collections:
           - { name: description, label: "Description", widget: "text" }
           - { name: ctaText, label: "Call to Action Text", widget: "string" }
           - { name: ctaLink, label: "Call to Action Link", widget: "string" }
-      - label: "Homepage and Logo"
+      - label: "Homepage, Logo, Donate, etc."
         name: "homepageheaderconfig"
         file: "docusaurus/config/homepage-header.json"
         fields:
@@ -189,3 +189,8 @@ collections:
           widget: "object"
           fields:
             - { name: src, label: "Logo Image", widget: image }
+        - label: "Donate Button"
+          name: "donateButton"
+          widget: "object"
+          fields:
+            - { name: campaignUrl, label: "Donate Campaign URL", widget: string }

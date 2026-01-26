@@ -1,6 +1,7 @@
+import homepageHeaderConfig from "../../config/homepage-header.json";
 export default function DonateButton() {
   return <iframe
-        src="https://donate.mazloweb.com/donate/blossom-with-the-nonbinary-hebrew-project"
+        src={homepageHeaderConfig.donateButton.campaignUrl}
         height="850"
         width="500"
         style={{border: "none"}}

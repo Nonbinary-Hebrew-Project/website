@@ -9,5 +9,8 @@
   "siteLogo": {
     "src": "img/logo.png",
     "alt": ""
+  },
+  "donateButton": {
+    "campaignUrl": "https://donate.mazloweb.com/donate/blossom-with-the-nonbinary-hebrew-project"
   }
 }
