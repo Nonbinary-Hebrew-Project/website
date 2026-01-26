@@ -9,7 +9,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://nonbinary-hebrew-project.netlify.app",
+  url: "https://nonbinaryhebrew.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -57,7 +57,7 @@ const config: Config = {
           //     ...parts.slice(-2),
           //   ];
           //   return (
-          //     "https://nonbinary-hebrew-project.netlify.app/admin/#/collections/" +
+          //     "https://nonbinaryhebrew.com/admin/#/collections/" +
           //     partsWithMergedBase.join("/")
           //   );
           // },
@@ -75,7 +75,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: ({ blogDirPath, blogPath, permalink, locale }) =>
-          //   `https://nonbinary-hebrew-project.netlify.app/admin/#/collections/${blogDirPath}/entries/${blogPath.replace(
+          //   `https://nonbinaryhebrew.com/admin/#/collections/${blogDirPath}/entries/${blogPath.replace(
           //     ".mdx",
           //     ""
           //   )}`,
@@ -163,7 +163,7 @@ const config: Config = {
             // },
             {
               label: "Content Manager",
-              href: "https://nonbinary-hebrew-project.netlify.app/admin/",
+              href: "https://nonbinaryhebrew.com/admin/",
             },
           ],
         },
